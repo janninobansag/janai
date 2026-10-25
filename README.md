@@ -65,12 +65,33 @@ The installer stages the bundle before replacing an existing directory and attem
 
 ## Remove
 
-Delete only the `anti-slop-ui` folder from the installation location using your file manager:
+Delete the installed `anti-slop-ui` folder for each location where you installed it. Run these commands from the project root for a project install:
 
-- User installation: `~/.agents/skills/anti-slop-ui`.
-- Project installation: `<project>/.agents/skills/anti-slop-ui`.
+PowerShell, project install:
 
-Restart Codex if the removed skill still appears. `npm uninstall` alone does not remove the copied skill folder.
+```powershell
+Remove-Item -LiteralPath ".agents\skills\anti-slop-ui" -Recurse
+```
+
+PowerShell, user-wide install:
+
+```powershell
+Remove-Item -LiteralPath "$env:USERPROFILE\.agents\skills\anti-slop-ui" -Recurse
+```
+
+macOS/Linux, project install:
+
+```sh
+rm -r -- ".agents/skills/anti-slop-ui"
+```
+
+macOS/Linux, user-wide install:
+
+```sh
+rm -r -- "$HOME/.agents/skills/anti-slop-ui"
+```
+
+These commands remove the installed skill folder; they leave the source in this repository and the npm package published. `npm uninstall` alone does not remove the copied skill. Restart Codex if the removed skill still appears.
 
 ## Develop and verify
 
