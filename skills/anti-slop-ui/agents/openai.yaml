@@ -1,0 +1,7 @@
+interface:
+  display_name: "Anti-slop UI"
+  short_description: "Create distinctive, product-appropriate interfaces"
+  default_prompt: "Use $anti-slop-ui to design and build an interface that fits this product and its users."
+
+policy:
+  allow_implicit_invocation: true
