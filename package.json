@@ -1,5 +1,5 @@
 {
-  "name": "@janai/anti-slop-ui",
+  "name": "@bansag/anti-slop-ui",
   "version": "0.1.0",
   "description": "Install a Codex skill for distinctive, product-appropriate UI and UX.",
   "type": "module",

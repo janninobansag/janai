@@ -29,7 +29,7 @@ test('the npm tarball installs through its published executable', async (t) => {
 
   const packed = JSON.parse(npm(['pack', '--json', '--pack-destination', scratch], root));
   // npm 10/11 return an array; npm 12 keys results by package name.
-  const archive = Array.isArray(packed) ? packed[0] : packed['@janai/anti-slop-ui'];
+  const archive = Array.isArray(packed) ? packed[0] : packed['@bansag/anti-slop-ui'];
   assert.ok(archive, 'Expected the scoped package in npm pack output.');
   const contents = archive.files.map(file => file.path);
   for (const required of ['bin/cli.js', 'lib/install.js', 'skills/anti-slop-ui/SKILL.md', 'skills/anti-slop-ui/agents/openai.yaml', 'README.md', 'LICENSE']) {

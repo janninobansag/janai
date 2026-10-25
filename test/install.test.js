@@ -110,7 +110,7 @@ test('CLI help succeeds without installing', async (t) => {
   const paths = await sandbox(t);
   const result = spawnSync(process.execPath, [cli, '--help', '--project'], { cwd: paths.cwd, encoding: 'utf8' });
   assert.equal(result.status, 0, result.stderr);
-  assert.match(result.stdout, /Usage: npx @janai\/anti-slop-ui/);
+  assert.match(result.stdout, /Usage: npx @bansag\/anti-slop-ui/);
   assert.deepEqual(await readdir(paths.cwd), []);
 });
 

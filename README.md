@@ -1,4 +1,4 @@
-# @janai/anti-slop-ui
+# @bansag/anti-slop-ui
 
 A Codex skill for creating distinctive, product-appropriate interfaces. It guides design decisions using the product brief, audience, content, and existing app rather than prescribing one aesthetic.
 
@@ -9,7 +9,7 @@ The npm package includes the skill and a small installer. It uses Node.js built-
 Once published on npm, install for your user account with:
 
 ```sh
-npx @janai/anti-slop-ui
+npx @bansag/anti-slop-ui
 ```
 
 This copies the skill into `~/.agents/skills/anti-slop-ui`, where `~` is your home directory. On Windows this is normally `%USERPROFILE%`.
@@ -17,7 +17,7 @@ This copies the skill into `~/.agents/skills/anti-slop-ui`, where `~` is your ho
 To install for one project, run this from that project's root:
 
 ```sh
-npx @janai/anti-slop-ui --project
+npx @bansag/anti-slop-ui --project
 ```
 
 The destination is `<current-directory>/.agents/skills/anti-slop-ui`. The installer uses the directory you run it from; it does not search for a Git root. You can commit that folder to share the skill with your project.
@@ -55,8 +55,8 @@ This is an instruction-only skill. It does not run an MCP server, call a model A
 Use `@latest` to fetch the current published version. Back up any local customizations before replacing them:
 
 ```sh
-npx @janai/anti-slop-ui@latest --force
-npx @janai/anti-slop-ui@latest --project --force
+npx @bansag/anti-slop-ui@latest --force
+npx @bansag/anti-slop-ui@latest --project --force
 ```
 
 Choose the command matching the location you originally installed into. Installing both user and project copies can make the skill appear twice in Codex; keep the copy appropriate for your workflow.
@@ -85,18 +85,18 @@ For a release, also confirm Codex discovery and behavior in a fresh session usin
 
 ## Publish
 
-The npm package name assumes you control the `@janai` user or organization scope. Authenticate locally with an account that has publishing rights. Do not put npm credentials in this repository.
+The package uses the `@bansag` user scope shown on the npm account. Authenticate locally with that account before publishing. Do not put npm credentials in this repository.
 
 ```sh
 npm login
 npm whoami
-npm view @janai/anti-slop-ui name version
+npm view @bansag/anti-slop-ui name version
 npm test
 npm pack --dry-run
 npm publish --access public
 ```
 
-For a first release, an authenticated registry lookup may report that the package does not exist. Confirm the account is `janai` or has the required organization publishing role before publishing. Each later release needs an unused version in `package.json`. The `prepublishOnly` hook runs the installer tests before publication.
+For a first release, an authenticated registry lookup may report that the package does not exist. Each later release needs an unused version in `package.json`. The `prepublishOnly` hook runs the installer tests before publication.
 
 This package installs local skill folders. OpenAI recommends plugins for native reusable skill distribution; a marketplace plugin can be added separately. See [OpenAI's skill guide](https://learn.chatgpt.com/docs/build-skills) for discovery locations and [npm's package.json reference](https://docs.npmjs.com/cli/configuring-npm/package-json) for CLI packaging.
 

@@ -4,7 +4,7 @@ import { installSkill } from '../lib/install.js';
 
 const help = `Install the anti-slop-ui Codex skill.
 
-Usage: npx @janai/anti-slop-ui [--project] [--force] [--help]
+Usage: npx @bansag/anti-slop-ui [--project] [--force] [--help]
 
 Options:
   --project  Install into .agents/skills in the current directory.
