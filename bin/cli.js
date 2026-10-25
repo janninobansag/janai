@@ -30,7 +30,7 @@ try {
   } else {
     const result = await installSkill(values);
     console.log(`${result.replaced ? 'Updated' : 'Installed'} anti-slop-ui at ${result.destination}`);
-    console.log('Use $anti-slop-ui in Codex when building an interface.');
+    console.log('In Codex, run /skills to select Anti-slop UI, or invoke it with $anti-slop-ui.');
     console.log('If the skill does not appear, restart Codex.');
   }
 } catch (error) {

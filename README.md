@@ -40,11 +40,13 @@ An existing destination is left alone unless you pass `--force`. Files and symbo
 
 ## Use in Codex
 
+In the Codex IDE extension or CLI, run `/skills` and select **Anti-slop UI**, or type `$` in the composer and select it. You can also invoke it directly in your request:
+
 ```text
 Use $anti-slop-ui to build the onboarding screen for our inventory app.
 ```
 
-Codex may also select the skill for relevant UI creation requests. Its description focuses on frontend design and substantial redesign work, and excludes backend-only work and exact reproduction tasks. If the skill does not appear, restart Codex.
+`/anti-slop-ui` is not a slash command; use `/skills` or `$anti-slop-ui`. Codex may also select the skill for relevant UI creation requests. Its description focuses on frontend design and substantial redesign work, and excludes backend-only work and exact reproduction tasks. If it does not appear in the skill picker, confirm it was installed into the project you opened (or your user skills folder), then restart Codex.
 
 The skill asks Codex to inspect the brief and existing app, choose a coherent visual direction, and make deliberate decisions about layout, type, color, content, and interaction. It accounts for responsive behavior, keyboard access, and meaningful UI states, and directs the agent to disclose checks it could not perform.
 
