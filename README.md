@@ -48,7 +48,7 @@ Use $janai to build the onboarding screen for our inventory app.
 
 `/janai` is not a slash command; use `/skills` or `$janai`. Codex may also select the skill for relevant UI creation requests. Its description focuses on frontend design and substantial redesign work, and excludes backend-only work and exact reproduction tasks. If it does not appear in the skill picker, confirm it was installed into the project you opened (or your user skills folder), then restart Codex.
 
-The skill asks Codex to inspect the brief and existing app, choose a coherent visual direction, and make deliberate decisions about layout, type, color, content, and interaction. It accounts for responsive behavior, keyboard access, and meaningful UI states, and directs the agent to disclose checks it could not perform.
+The skill asks Codex to inspect the brief and existing app, choose a coherent visual direction, and make deliberate decisions about layout, type, color, content, and interaction. For website builds and substantial redesigns, it also guides Codex to inspect a suitable live design reference, including the curated sources in `skills/janai/references/web-design.md`, and adapt observed typography, spacing, color, and interaction choices to the product. It accounts for responsive behavior, keyboard access, and meaningful UI states, and directs the agent to disclose checks it could not perform.
 
 This is an instruction-only skill. It does not run an MCP server, call a model API, or measure an automated design score. Installation does not require an API key. Results still depend on the brief, the model, and the tools available in the Codex session.
 
