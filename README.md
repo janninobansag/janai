@@ -1,6 +1,6 @@
 # @bansag/anti-slop-ui
 
-The `@bansag/anti-slop-ui` npm package installs the **Janai** Codex skill for creating distinctive, product-appropriate interfaces. The skill guides design decisions using the product brief, audience, content, and existing app rather than prescribing one aesthetic.
+The `@bansag/anti-slop-ui` npm package installs the **Janai** Codex skill for creating distinctive, product-appropriate interfaces in your codebase. Janai grounds its choices in the product and avoids defaulting to generic templates or routing local implementation through the hosted Sites workflow.
 
 The npm package includes the skill and a small installer. It uses Node.js built-ins, has no dependencies, and requires Node.js 22 or newer. The installer is designed for Windows, macOS, and Linux; the CI workflow covers all three.
 

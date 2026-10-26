@@ -1,7 +1,7 @@
 {
   "name": "@bansag/anti-slop-ui",
-  "version": "0.2.2",
-  "description": "Install the Janai Codex skill for distinctive, product-appropriate UI and UX.",
+  "version": "0.2.3",
+  "description": "Install Janai, a product-specific Codex skill for distinctive interfaces in your codebase.",
   "type": "module",
   "bin": { "anti-slop-ui": "bin/cli.js" },
   "files": ["bin/", "lib/", "skills/", "docs/skill-evaluation.md"],

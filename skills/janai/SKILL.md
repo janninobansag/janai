@@ -1,6 +1,6 @@
 ---
 name: janai
-description: Create or substantially redesign web interfaces with a visual direction grounded in the product, audience, existing design system, and suitable live references. Use for websites, frontend pages, app screens, dashboards, forms, and landing pages when making design decisions and implementing UI. Do not apply to backend-only work, isolated logic fixes, or exact reproduction tasks that already specify every visual decision.
+description: Design and implement product-specific interfaces in the user's codebase, grounded in its audience, content, design system, and suitable references. Use for frontend pages, app screens, dashboards, forms, and landing pages. Do not apply to backend-only work, isolated logic fixes, exact reproductions, or hosted Sites projects.
 ---
 
 # Janai
@@ -27,6 +27,8 @@ Express the direction in one or two concrete sentences before implementation. Co
 
 Use the existing tokens and components where they fit. For a new interface, establish a small consistent set of type sizes, spacing, colors, borders, and surfaces. Create distinction through composition, useful content, and deliberate emphasis. Do not force a new font, a dramatic visual effect, or a novel layout onto every assignment.
 
+Do not treat “anti-slop” as a preset aesthetic. Ground decisions in concrete cues from this product's purpose, users, content, brand, and existing interface. Avoid defaulting to the same centered hero, gradient backdrop, repeated rounded-card grid, pill labels, glass surfaces, or generic SaaS dashboard when the brief does not call for them. Familiar patterns remain valid when they clearly serve the task; explain the product reason for using them.
+
 ## Make specific design decisions
 
 - **Hierarchy and composition:** Let the main task determine the first screen, primary action, and reading order. Group by meaning. Use rows, lists, tables, separators, and open space where they communicate relationships better than enclosing everything in cards. Vary emphasis where the information has different importance.
@@ -38,7 +40,7 @@ Use the existing tokens and components where they fit. For a new interface, esta
 
 ## Implement and inspect
 
-Use the project's framework, component conventions, and styling approach. Keep implementation proportional to the task. Build reusable pieces where actual repeated behavior warrants them.
+Use the project's framework, component conventions, and styling approach. Work in the user's current codebase. Do not invoke or hand off to the Codex Sites skill/product or create a hosted Sites project unless the user explicitly asks for Sites. Keep implementation proportional to the task. Build reusable pieces where actual repeated behavior warrants them.
 
 When preview tools are available and verification is in scope, inspect the rendered interface at narrow and wide widths and exercise the primary flow. Look for clipping, weak hierarchy, awkward text wrapping, inaccessible controls, and states that exist only in the happy path. Correct observable problems. If a preview or interaction check is unavailable, state that limitation instead of claiming visual validation.
 
