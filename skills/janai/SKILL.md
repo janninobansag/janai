@@ -1,6 +1,6 @@
 ---
 name: janai
-description: Create or substantially redesign web interfaces with a visual direction grounded in the product, audience, and existing design system. Use for frontend pages, app screens, dashboards, forms, and landing pages when making design decisions and implementing UI. Do not apply to backend-only work, isolated logic fixes, or exact reproduction tasks that already specify every visual decision.
+description: Create or substantially redesign web interfaces with a visual direction grounded in the product, audience, existing design system, and suitable live references. Use for websites, frontend pages, app screens, dashboards, forms, and landing pages when making design decisions and implementing UI. Do not apply to backend-only work, isolated logic fixes, or exact reproduction tasks that already specify every visual decision.
 ---
 
 # Janai
@@ -10,6 +10,8 @@ Build an interface whose layout, content, and behavior belong to its product. Tr
 ## Establish the design context
 
 Before choosing a style, inspect the relevant app structure, existing screens, reusable components, tokens, fonts, assets, and supported framework. Identify the intended audience, the primary task, and what information or action must be easiest to find. Use supplied screenshots and brand references when available.
+
+For a new website or a substantial redesign, read [the website reference guide](references/web-design.md) and study a relevant example before implementing visual choices. Start with references supplied by the user, then choose from the guide if needed. When browsing is available, inspect the live page rather than relying on a gallery thumbnail. Note the specific choices worth adapting: type roles, content width and spacing rhythm, palette and contrast, imagery, section composition, navigation, hover behavior, and motion. Check a narrow viewport where possible. Carry those observations into the project's own design tokens and components; do not reproduce another site's brand or copy its page wholesale. If a reference is inaccessible, use only what can be observed and avoid claiming exact fonts, measurements, or interactions.
 
 Ask a focused question only when an unresolved choice would materially change the design. For a broad brief, choose a reasonable direction and state the assumption briefly. Match the requested scope: a new form in an existing app usually needs the app's established language; a new product may need its own direction.
 
