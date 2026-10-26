@@ -32,7 +32,7 @@ test('the npm tarball installs through its published executable', async (t) => {
   const archive = Array.isArray(packed) ? packed[0] : packed['@bansag/anti-slop-ui'];
   assert.ok(archive, 'Expected the scoped package in npm pack output.');
   const contents = archive.files.map(file => file.path);
-  for (const required of ['bin/cli.js', 'lib/install.js', 'skills/anti-slop-ui/SKILL.md', 'skills/anti-slop-ui/agents/openai.yaml', 'README.md', 'LICENSE']) {
+  for (const required of ['bin/cli.js', 'lib/install.js', 'skills/janai/SKILL.md', 'skills/janai/agents/openai.yaml', 'README.md', 'LICENSE']) {
     assert.ok(contents.includes(required), `Missing package resource: ${required}`);
   }
   assert.ok(contents.every(path => !/^(?:test|node_modules|\.github|\.agents)\//.test(path)), 'Development files must stay out of the package.');
@@ -43,7 +43,7 @@ test('the npm tarball installs through its published executable', async (t) => {
     '--package', join(scratch, archive.filename), '--', 'anti-slop-ui', '--project',
   ], { cwd: project, encoding: 'utf8', timeout: 30000, windowsHide: true });
   assert.equal(installed.status, 0, installed.error?.message ?? installed.stderr);
-  assert.match(installed.stdout, /Installed anti-slop-ui/);
-  const actual = await readFile(join(project, '.agents', 'skills', 'anti-slop-ui', 'SKILL.md'), 'utf8');
-  assert.equal(actual, await readFile(join(root, 'skills', 'anti-slop-ui', 'SKILL.md'), 'utf8'));
+  assert.match(installed.stdout, /Installed Janai/);
+  const actual = await readFile(join(project, '.agents', 'skills', 'janai', 'SKILL.md'), 'utf8');
+  assert.equal(actual, await readFile(join(root, 'skills', 'janai', 'SKILL.md'), 'utf8'));
 });
