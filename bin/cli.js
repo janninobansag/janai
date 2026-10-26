@@ -2,13 +2,13 @@
 import { parseArgs } from 'node:util';
 import { installSkill } from '../lib/install.js';
 
-const help = `Install the anti-slop-ui Codex skill.
+const help = `Install the Janai Codex skill.
 
 Usage: npx @bansag/anti-slop-ui [--project] [--force] [--help]
 
 Options:
   --project  Install into .agents/skills in the current directory.
-  --force    Replace an existing skill directory, including local edits.
+  --force    Replace an existing Janai skill directory, including local edits.
   --help     Show this help without installing anything.
 
 By default, installs into .agents/skills in your home directory.
@@ -29,8 +29,11 @@ try {
     process.stdout.write(help);
   } else {
     const result = await installSkill(values);
-    console.log(`${result.replaced ? 'Updated' : 'Installed'} anti-slop-ui at ${result.destination}`);
-    console.log('In Codex, run /skills to select Anti-slop UI, or invoke it with $anti-slop-ui.');
+    console.log(`${result.replaced ? 'Updated' : 'Installed'} Janai at ${result.destination}`);
+    console.log('In Codex, run /skills to select Janai, or invoke it with $janai.');
+    if (result.legacyDestination) {
+      console.warn(`A previous anti-slop-ui skill remains at ${result.legacyDestination}. Review it and remove it if it duplicates Janai.`);
+    }
     console.log('If the skill does not appear, restart Codex.');
   }
 } catch (error) {

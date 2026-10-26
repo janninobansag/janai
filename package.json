@@ -1,7 +1,7 @@
 {
   "name": "@bansag/anti-slop-ui",
-  "version": "0.1.0",
-  "description": "Install a Codex skill for distinctive, product-appropriate UI and UX.",
+  "version": "0.2.0",
+  "description": "Install the Janai Codex skill for distinctive, product-appropriate UI and UX.",
   "type": "module",
   "bin": { "anti-slop-ui": "bin/cli.js" },
   "files": ["bin/", "lib/", "skills/", "docs/skill-evaluation.md"],
@@ -14,7 +14,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "keywords": ["codex", "agent-skills", "ui", "ux", "design", "anti-slop"],
+  "keywords": ["codex", "agent-skills", "ui", "ux", "design", "anti-slop", "janai"],
   "author": "Janai",
   "license": "MIT"
 }

@@ -1,9 +1,9 @@
 ---
-name: anti-slop-ui
+name: janai
 description: Create or substantially redesign web interfaces with a visual direction grounded in the product, audience, and existing design system. Use for frontend pages, app screens, dashboards, forms, and landing pages when making design decisions and implementing UI. Do not apply to backend-only work, isolated logic fixes, or exact reproduction tasks that already specify every visual decision.
 ---
 
-# Anti-slop UI
+# Janai
 
 Build an interface whose layout, content, and behavior belong to its product. Treat familiar design patterns as choices with a purpose. The user's brief, supplied references, and existing design system determine the result.
 

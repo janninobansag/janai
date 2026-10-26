@@ -1,6 +1,6 @@
 # @bansag/anti-slop-ui
 
-A Codex skill for creating distinctive, product-appropriate interfaces. It guides design decisions using the product brief, audience, content, and existing app rather than prescribing one aesthetic.
+The `@bansag/anti-slop-ui` npm package installs the **Janai** Codex skill for creating distinctive, product-appropriate interfaces. The skill guides design decisions using the product brief, audience, content, and existing app rather than prescribing one aesthetic.
 
 The npm package includes the skill and a small installer. It uses Node.js built-ins, has no dependencies, and requires Node.js 22 or newer. The installer is designed for Windows, macOS, and Linux; the CI workflow covers all three.
 
@@ -12,7 +12,7 @@ Once published on npm, install for your user account with:
 npx @bansag/anti-slop-ui
 ```
 
-This copies the skill into `~/.agents/skills/anti-slop-ui`, where `~` is your home directory. On Windows this is normally `%USERPROFILE%`.
+This copies the skill into `~/.agents/skills/janai`, where `~` is your home directory. On Windows this is normally `%USERPROFILE%`.
 
 To install for one project, run this from that project's root:
 
@@ -20,7 +20,7 @@ To install for one project, run this from that project's root:
 npx @bansag/anti-slop-ui --project
 ```
 
-The destination is `<current-directory>/.agents/skills/anti-slop-ui`. The installer uses the directory you run it from; it does not search for a Git root. You can commit that folder to share the skill with your project.
+The destination is `<current-directory>/.agents/skills/janai`. The installer uses the directory you run it from; it does not search for a Git root. You can commit that folder to share the skill with your project.
 
 To try the installer from this source checkout before publication:
 
@@ -40,13 +40,13 @@ An existing destination is left alone unless you pass `--force`. Files and symbo
 
 ## Use in Codex
 
-In the Codex IDE extension or CLI, run `/skills` and select **Anti-slop UI**, or type `$` in the composer and select it. You can also invoke it directly in your request:
+In the Codex IDE extension or CLI, run `/skills` and select **Janai**, or type `$` in the composer and select it. You can also invoke it directly in your request:
 
 ```text
-Use $anti-slop-ui to build the onboarding screen for our inventory app.
+Use $janai to build the onboarding screen for our inventory app.
 ```
 
-`/anti-slop-ui` is not a slash command; use `/skills` or `$anti-slop-ui`. Codex may also select the skill for relevant UI creation requests. Its description focuses on frontend design and substantial redesign work, and excludes backend-only work and exact reproduction tasks. If it does not appear in the skill picker, confirm it was installed into the project you opened (or your user skills folder), then restart Codex.
+`/janai` is not a slash command; use `/skills` or `$janai`. Codex may also select the skill for relevant UI creation requests. Its description focuses on frontend design and substantial redesign work, and excludes backend-only work and exact reproduction tasks. If it does not appear in the skill picker, confirm it was installed into the project you opened (or your user skills folder), then restart Codex.
 
 The skill asks Codex to inspect the brief and existing app, choose a coherent visual direction, and make deliberate decisions about layout, type, color, content, and interaction. It accounts for responsive behavior, keyboard access, and meaningful UI states, and directs the agent to disclose checks it could not perform.
 
@@ -63,34 +63,36 @@ npx @bansag/anti-slop-ui@latest --project --force
 
 Choose the command matching the location you originally installed into. Installing both user and project copies can make the skill appear twice in Codex; keep the copy appropriate for your workflow.
 
-The installer stages the bundle before replacing an existing directory and attempts to restore the old copy if replacement fails. A lock prevents two copies of this installer from updating the same destination at once. If an installer is interrupted and leaves `.anti-slop-ui.install.lock`, confirm no install is active before removing that named lock file. Preserve any `.anti-slop-ui-*` recovery directory until you have checked whether it contains your previous skill.
+The installer stages the bundle before replacing an existing directory and attempts to restore the old copy if replacement fails. A lock prevents two copies of this installer from updating the same destination at once. If an installer is interrupted and leaves `.janai.install.lock`, confirm no install is active before removing that named lock file. Preserve any `.janai-*` recovery directory until you have checked whether it contains your previous skill.
+
+Versions before `0.2.0` installed the skill as `anti-slop-ui`. The renamed installer leaves that old folder in place so it does not delete local edits, and warns when it finds one. If you previously installed that version, remove `.agents/skills/anti-slop-ui` (project install) or `~/.agents/skills/anti-slop-ui` (user install) after reviewing any custom edits. The removal commands below show the syntax.
 
 ## Remove
 
-Delete the installed `anti-slop-ui` folder for each location where you installed it. Run these commands from the project root for a project install:
+Delete the installed `janai` folder for each location where you installed it. Run these commands from the project root for a project install:
 
 PowerShell, project install:
 
 ```powershell
-Remove-Item -LiteralPath ".agents\skills\anti-slop-ui" -Recurse
+Remove-Item -LiteralPath ".agents\skills\janai" -Recurse
 ```
 
 PowerShell, user-wide install:
 
 ```powershell
-Remove-Item -LiteralPath "$env:USERPROFILE\.agents\skills\anti-slop-ui" -Recurse
+Remove-Item -LiteralPath "$env:USERPROFILE\.agents\skills\janai" -Recurse
 ```
 
 macOS/Linux, project install:
 
 ```sh
-rm -r -- ".agents/skills/anti-slop-ui"
+rm -r -- ".agents/skills/janai"
 ```
 
 macOS/Linux, user-wide install:
 
 ```sh
-rm -r -- "$HOME/.agents/skills/anti-slop-ui"
+rm -r -- "$HOME/.agents/skills/janai"
 ```
 
 These commands remove the installed skill folder; they leave the source in this repository and the npm package published. `npm uninstall` alone does not remove the copied skill. Restart Codex if the removed skill still appears.
