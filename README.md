@@ -6,10 +6,10 @@ The npm package includes the skill and a small installer. It uses Node.js built-
 
 ## Install
 
-Once published on npm, install for your user account with:
+Install the latest published version for your user account with:
 
 ```sh
-npx @bansag/anti-slop-ui
+npx @bansag/anti-slop-ui@latest
 ```
 
 This copies the skill into `~/.agents/skills/janai`, where `~` is your home directory. On Windows this is normally `%USERPROFILE%`.
@@ -17,10 +17,18 @@ This copies the skill into `~/.agents/skills/janai`, where `~` is your home dire
 To install for one project, run this from that project's root:
 
 ```sh
-npx @bansag/anti-slop-ui --project
+npx @bansag/anti-slop-ui@latest --project
 ```
 
 The destination is `<current-directory>/.agents/skills/janai`. The installer uses the directory you run it from; it does not search for a Git root. You can commit that folder to share the skill with your project.
+
+If you are inside this package's own repository, use its local installer instead of `npx`. For example, from this repository's `website/` folder on Windows:
+
+```powershell
+node ..\bin\cli.js --project
+```
+
+Running `npx @bansag/anti-slop-ui` from a nested folder of the package's own checkout can make npm resolve the enclosing checkout and fail to launch the command on Windows. For the published npm installer, run the `npx` command from the project you want to install Janai into, outside this package's checkout.
 
 To try the installer from this source checkout before publication:
 
