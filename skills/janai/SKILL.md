@@ -13,6 +13,12 @@ Before choosing a style, inspect the relevant app structure, existing screens, r
 
 Ask a focused question only when an unresolved choice would materially change the design. For a broad brief, choose a reasonable direction and state the assumption briefly. Match the requested scope: a new form in an existing app usually needs the app's established language; a new product may need its own direction.
 
+## Domain references
+
+- For e-commerce storefronts, catalogs, or product-detail work, read [the e-commerce reference](references/e-commerce.md). Treat it as optional inspiration and adapt it to the store's products, audience, brand, and requested scope.
+- For audio, game, or other media-led studio portfolios, read [the Overworld Audio reference](references/overworld-audio.md). Borrow interaction and storytelling ideas only when they serve the portfolio and remain usable.
+- For social networks, communities, messaging products, or creator platforms, read [the social media reference](references/social-media.md). Select examples that fit the product, then inspect their actual visual and interaction details before adapting them.
+
 ## Choose a coherent direction
 
 Express the direction in one or two concrete sentences before implementation. Connect choices to the user's task: density, typography, hierarchy, color, imagery, and interaction should support the same goal. For example, a dispatch dashboard can prioritize compact rows, aligned numbers, and immediately visible exceptions; a reading app can prioritize text measure, generous leading, and quiet navigation.
